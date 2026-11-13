@@ -120,3 +120,19 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+INSTALLED_APPS = [
+    "django.contrib.admin",
+    "django.contrib.auth",
+    "django.contrib.contenttypes",
+    "django.contrib.sessions",
+    "django.contrib.messages",
+    "django.contrib.staticfiles",
+    "authentication",
+]
+
+AUTH_USER_MODEL = "authentication.User"
+
+LANGUAGE_CODE = "fr-fr"
+
+TIME_ZONE = "Europe/Paris"
