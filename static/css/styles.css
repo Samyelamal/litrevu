@@ -1,0 +1,9 @@
+.lien-evitement {
+    position: absolute;
+    left: -9999px;
+}
+
+.lien-evitement:focus {
+    left: 1rem;
+    top: 1rem;
+}
