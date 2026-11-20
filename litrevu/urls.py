@@ -4,6 +4,8 @@ from django.contrib.auth.views import LoginView, LogoutView
 from django.urls import path
 from django.views.generic import TemplateView
 
+from authentication.views import signup_view
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path(
@@ -20,4 +22,5 @@ urlpatterns = [
         login_required(TemplateView.as_view(template_name='flux.html')),
         name='flux',
     ),
+    path('signup/', signup_view, name='signup'),
 ]
