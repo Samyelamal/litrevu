@@ -7,3 +7,15 @@
     left: 1rem;
     top: 1rem;
 }
+
+.accueil {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+@media (max-width: 700px) {
+    .accueil {
+        grid-template-columns: 1fr;
+    }
+}

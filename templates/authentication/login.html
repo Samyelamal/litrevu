@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Connexion{% endblock %}
+
+{% block content %}
+    <h1>Bienvenue sur LITRevu</h1>
+
+    <div class="accueil">
+        <section class="accueil-inscription" aria-labelledby="titre-inscription">
+            <h2 id="titre-inscription">Inscrivez-vous maintenant</h2>
+            <a href="#" class="bouton">S'inscrire</a>
+        </section>
+
+        <section class="accueil-connexion" aria-labelledby="titre-connexion">
+            <h2 id="titre-connexion">Connectez-vous</h2>
+            <form method="post" novalidate>
+                {% csrf_token %}
+                {% if form.non_field_errors %}
+                    <div class="erreur" role="alert">{{ form.non_field_errors }}</div>
+                {% endif %}
+                {{ form.as_div }}
+                <button type="submit" class="bouton">Se connecter</button>
+            </form>
+        </section>
+    </div>
+{% endblock %}
